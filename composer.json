@@ -1,0 +1,10 @@
+{
+    "name": "przeslijmi/ad-wfrsystem-plug",
+    "version": "v1.1.2",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Przeslijmi\\AgileDataWfrSystemPlug\\": "src/"
+        }
+    }
+}

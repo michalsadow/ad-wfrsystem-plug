@@ -1,0 +1,1629 @@
+{
+    "tables": [
+        {
+            "name": "bankaccount_bankaccount",
+            "humanName": "Rachunki bankowe do umów operacyjnych",
+            "key": "PfYEzn0X"
+        },
+        {
+            "name": "bankaccount_bankaccountoperation",
+            "humanName": "Operacje na rachunkach bankowych do umów operacyjnych",
+            "key": "y98gtXSt"
+        },
+        {
+            "name": "entities_entity",
+            "humanName": "Podmioty (pośrednicy i beneficjenci)",
+            "key": "oftF003e"
+        },
+        {
+            "name": "operating_agreement_agreementconcentration",
+            "humanName": "Limity koncentracji/udziału WFR",
+            "key": "7L4cHvR7"
+        },
+        {
+            "name": "operating_agreement_agreementcost",
+            "humanName": "Koszty umów operacyjnych (zarządzania i windykacji)",
+            "key": "RuQ8awuM"
+        },
+        {
+            "name": "operating_agreement_businessplan",
+            "humanName": "Biznesplany (do rozliczania kosztów)",
+            "key": "jNpH7a43"
+        },
+        {
+            "name": "operating_agreement_operatingagreement",
+            "humanName": "Umowy operacyjne",
+            "key": "45D4mPst"
+        },
+        {
+            "name": "unit_agreement_bank",
+            "humanName": "Słownik banków",
+            "key": "qPerl0R4"
+        },
+        {
+            "name": "unit_agreement_pkd",
+            "humanName": "Słownik PKD",
+            "key": "N60MdQnG"
+        },
+        {
+            "name": "unit_agreement_tranche",
+            "humanName": "Wypłaty kapitału umów jednostkowych",
+            "key": "ENFCa5aA"
+        },
+        {
+            "name": "unit_agreement_unitagreement",
+            "humanName": "Umowy jednostkowe",
+            "key": "znzM3FUV"
+        },
+        {
+            "name": "vindication_action",
+            "humanName": "Działania windykacyjne",
+            "key": "3tbZzZF9"
+        },
+        {
+            "name": "vindication_contactdata",
+            "humanName": "Osoby prowadzące działania",
+            "key": "2w8fsIJ3"
+        },
+        {
+            "name": "vindication_monitoringcard",
+            "humanName": "Karty monitorowania",
+            "key": "4M9zEyP0"
+        },
+        {
+            "name": "vindication_obligedentity",
+            "humanName": "Zobowiązani",
+            "key": "Q6IoL8dD"
+        },
+        {
+            "name": "vindication_salvage",
+            "humanName": "Odzyski",
+            "key": "Cyg92NWZ"
+        },
+        {
+            "name": "vindication_salvagecost",
+            "humanName": "Koszty odzysków",
+            "key": "Mlb2Iajg"
+        },
+        {
+            "name": "vindication_security",
+            "humanName": "Zabezpieczenia",
+            "key": "TDLCe9hc"
+        },
+        {
+            "name": "vindication_vindicationprogress",
+            "humanName": "Postęp windykacji",
+            "key": "1GZeegjd"
+        }
+    ],
+    "fields": [
+        {
+            "key": "Qrd1TxxH",
+            "table": "bankaccount_bankaccount",
+            "field": "id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID rachunku bankowego do umowy operacyjnej"
+        },
+        {
+            "key": "uZyX8dSV",
+            "table": "bankaccount_bankaccount",
+            "field": "iban",
+            "type": "varchar",
+            "length": "34",
+            "humanName": "IBAN"
+        },
+        {
+            "key": "WgrvR1Kk",
+            "table": "bankaccount_bankaccount",
+            "field": "created_at",
+            "type": "datetime",
+            "length": "",
+            "humanName": "data i czas dodania do bazy"
+        },
+        {
+            "key": "J6Pu5mgD",
+            "table": "bankaccount_bankaccount",
+            "field": "comment",
+            "type": "longtext",
+            "length": "",
+            "humanName": "uwagi"
+        },
+        {
+            "key": "o3lKgIPY",
+            "table": "bankaccount_bankaccount",
+            "field": "operating_agreement_id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID umowy operacyjnej"
+        },
+        {
+            "key": "2W9rMnL6",
+            "table": "bankaccount_bankaccountoperation",
+            "field": "id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID operacji na rachunku bankowym do umowy operacyjnej"
+        },
+        {
+            "key": "rcFWK518",
+            "table": "bankaccount_bankaccountoperation",
+            "field": "operation_date",
+            "type": "date",
+            "length": "",
+            "humanName": "data operacji"
+        },
+        {
+            "key": "8F2eRwET",
+            "table": "bankaccount_bankaccountoperation",
+            "field": "currency_date",
+            "type": "date",
+            "length": "",
+            "humanName": "data waluty"
+        },
+        {
+            "key": "U1Qepex6",
+            "table": "bankaccount_bankaccountoperation",
+            "field": "contractor",
+            "type": "varchar",
+            "length": "255",
+            "humanName": "nazwa kontrahenta"
+        },
+        {
+            "key": "d2iVcJZO",
+            "table": "bankaccount_bankaccountoperation",
+            "field": "operation_name",
+            "type": "longtext",
+            "length": "",
+            "humanName": "opis operacji"
+        },
+        {
+            "key": "8bFledNZ",
+            "table": "bankaccount_bankaccountoperation",
+            "field": "operation_amount",
+            "type": "decimal",
+            "length": "",
+            "humanName": "kwota operacji"
+        },
+        {
+            "key": "XWCL59o1",
+            "table": "bankaccount_bankaccountoperation",
+            "field": "bank_account_id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID rachunku bankowego do umowy operacyjnej"
+        },
+        {
+            "key": "91jqgKF6",
+            "table": "bankaccount_bankaccountoperation",
+            "field": "accounting_date",
+            "type": "date",
+            "length": "",
+            "humanName": "data księgowania?"
+        },
+        {
+            "key": "Gef41NVu",
+            "table": "bankaccount_bankaccountoperation",
+            "field": "contractor_iban",
+            "type": "varchar",
+            "length": "34",
+            "humanName": "IBAN kontrahenta"
+        },
+        {
+            "key": "e81PDBBQ",
+            "table": "entities_entity",
+            "field": "id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID podmiotu (pośrednika lub benka)"
+        },
+        {
+            "key": "79YIZnig",
+            "table": "entities_entity",
+            "field": "name",
+            "type": "varchar",
+            "length": "200",
+            "humanName": "nazwa podmiotu"
+        },
+        {
+            "key": "yQ9hCkaW",
+            "table": "entities_entity",
+            "field": "short_name",
+            "type": "varchar",
+            "length": "200",
+            "humanName": "nazwa skrócona"
+        },
+        {
+            "key": "2cRysZro",
+            "table": "entities_entity",
+            "field": "email",
+            "type": "varchar",
+            "length": "254",
+            "humanName": "email"
+        },
+        {
+            "key": "D8SKPWm9",
+            "table": "entities_entity",
+            "field": "nip",
+            "type": "varchar",
+            "length": "10",
+            "humanName": "NIP"
+        },
+        {
+            "key": "CisZVt09",
+            "table": "entities_entity",
+            "field": "regon",
+            "type": "varchar",
+            "length": "14",
+            "humanName": "REGON (9 cyfr)"
+        },
+        {
+            "key": "nSogg7Rv",
+            "table": "entities_entity",
+            "field": "krs",
+            "type": "varchar",
+            "length": "20",
+            "humanName": "KRS"
+        },
+        {
+            "key": "pxg7QUrj",
+            "table": "entities_entity",
+            "field": "street",
+            "type": "varchar",
+            "length": "50",
+            "humanName": "nazwa ulicy"
+        },
+        {
+            "key": "2bfilIil",
+            "table": "entities_entity",
+            "field": "building_number",
+            "type": "varchar",
+            "length": "10",
+            "humanName": "numer budynku"
+        },
+        {
+            "key": "nis637DH",
+            "table": "entities_entity",
+            "field": "place_number",
+            "type": "varchar",
+            "length": "10",
+            "humanName": "numer lokalu"
+        },
+        {
+            "key": "FQN75lfw",
+            "table": "entities_entity",
+            "field": "post_code",
+            "type": "varchar",
+            "length": "10",
+            "humanName": "kod pocztowy"
+        },
+        {
+            "key": "URvZD5pL",
+            "table": "entities_entity",
+            "field": "city",
+            "type": "varchar",
+            "length": "50",
+            "humanName": "miasto"
+        },
+        {
+            "key": "4h6ztRi5",
+            "table": "entities_entity",
+            "field": "province",
+            "type": "varchar",
+            "length": "100",
+            "humanName": "województwo"
+        },
+        {
+            "key": "Ec9JRJqk",
+            "table": "entities_entity",
+            "field": "phone_number",
+            "type": "varchar",
+            "length": "20",
+            "humanName": "numer telefonu"
+        },
+        {
+            "key": "9K2KIv3c",
+            "table": "entities_entity",
+            "field": "type",
+            "type": "varchar",
+            "length": "20",
+            "humanName": "relacja z podmiotem"
+        },
+        {
+            "key": "Lz8SmUU9",
+            "table": "entities_entity",
+            "field": "contact_person",
+            "type": "varchar",
+            "length": "100",
+            "humanName": "osoba kontaktowa"
+        },
+        {
+            "key": "TJqY3dG2",
+            "table": "entities_entity",
+            "field": "community",
+            "type": "varchar",
+            "length": "100",
+            "humanName": "nazwa gminy"
+        },
+        {
+            "key": "XoFwMZ8P",
+            "table": "entities_entity",
+            "field": "county",
+            "type": "varchar",
+            "length": "100",
+            "humanName": "nazwa powiatu"
+        },
+        {
+            "key": "CYP6ovVp",
+            "table": "operating_agreement_agreementconcentration",
+            "field": "id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID limitu koncentracji/udziału WFR"
+        },
+        {
+            "key": "lC6tDT49",
+            "table": "operating_agreement_agreementconcentration",
+            "field": "amount_from",
+            "type": "decimal",
+            "length": "",
+            "humanName": "dla kwoty od"
+        },
+        {
+            "key": "TFkY34wi",
+            "table": "operating_agreement_agreementconcentration",
+            "field": "amount_to",
+            "type": "decimal",
+            "length": "",
+            "humanName": "dla kwoty do"
+        },
+        {
+            "key": "RwzY4WYd",
+            "table": "operating_agreement_agreementconcentration",
+            "field": "percent_participation",
+            "type": "decimal",
+            "length": "",
+            "humanName": "limit koncentracji/wkładu WFR"
+        },
+        {
+            "key": "QneAS4Kf",
+            "table": "operating_agreement_agreementconcentration",
+            "field": "type",
+            "type": "varchar",
+            "length": "20",
+            "humanName": "typ wpisu"
+        },
+        {
+            "key": "NmKR1ndh",
+            "table": "operating_agreement_agreementconcentration",
+            "field": "operating_agreement_id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID umowy operacyjnej"
+        },
+        {
+            "key": "gKj6O7df",
+            "table": "operating_agreement_agreementcost",
+            "field": "id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID kosztu w umowie operacyjnej"
+        },
+        {
+            "key": "Ftga2FQD",
+            "table": "operating_agreement_agreementcost",
+            "field": "vindication_cost",
+            "type": "tinyint",
+            "length": "",
+            "humanName": "czy koszt windykacji"
+        },
+        {
+            "key": "Ta3YpZof",
+            "table": "operating_agreement_agreementcost",
+            "field": "document_type",
+            "type": "varchar",
+            "length": "100",
+            "humanName": "typ dokumentu"
+        },
+        {
+            "key": "cpm1pYry",
+            "table": "operating_agreement_agreementcost",
+            "field": "document_number",
+            "type": "longtext",
+            "length": "",
+            "humanName": "numer dokumentu"
+        },
+        {
+            "key": "kijR2UtV",
+            "table": "operating_agreement_agreementcost",
+            "field": "document_date",
+            "type": "date",
+            "length": "",
+            "humanName": "data wystawienia"
+        },
+        {
+            "key": "cHs3QIxa",
+            "table": "operating_agreement_agreementcost",
+            "field": "company_nip",
+            "type": "varchar",
+            "length": "20",
+            "humanName": "nip wystawcy"
+        },
+        {
+            "key": "LKyiUY81",
+            "table": "operating_agreement_agreementcost",
+            "field": "company_name",
+            "type": "varchar",
+            "length": "255",
+            "humanName": "nazwa wystawcy"
+        },
+        {
+            "key": "Gr1hsZyU",
+            "table": "operating_agreement_agreementcost",
+            "field": "name",
+            "type": "longtext",
+            "length": "",
+            "humanName": "opis wydatku"
+        },
+        {
+            "key": "Io568q9A",
+            "table": "operating_agreement_agreementcost",
+            "field": "amount_netto",
+            "type": "decimal",
+            "length": "",
+            "humanName": "kwota netto"
+        },
+        {
+            "key": "7kXLbcuo",
+            "table": "operating_agreement_agreementcost",
+            "field": "qualification_amount_netto",
+            "type": "decimal",
+            "length": "",
+            "humanName": "kwota kwalifikowana netto"
+        },
+        {
+            "key": "YdY4toIV",
+            "table": "operating_agreement_agreementcost",
+            "field": "qualification_amount_brutto",
+            "type": "decimal",
+            "length": "",
+            "humanName": "kwota kwalifikowana brutto"
+        },
+        {
+            "key": "SUQZ29pU",
+            "table": "operating_agreement_agreementcost",
+            "field": "accounting_number",
+            "type": "longtext",
+            "length": "",
+            "humanName": "numer ewidencyjny"
+        },
+        {
+            "key": "Sz9CjmR2",
+            "table": "operating_agreement_agreementcost",
+            "field": "cost_date",
+            "type": "date",
+            "length": "",
+            "humanName": "data poniesienia kosztu"
+        },
+        {
+            "key": "DnT9icmI",
+            "table": "operating_agreement_agreementcost",
+            "field": "cost_category_type",
+            "type": "varchar",
+            "length": "50",
+            "humanName": "rodzaj kosztu"
+        },
+        {
+            "key": "1ldAGXY8",
+            "table": "operating_agreement_agreementcost",
+            "field": "eligibility",
+            "type": "varchar",
+            "length": "10",
+            "humanName": "kwalifikowalność po"
+        },
+        {
+            "key": "soHM9Czz",
+            "table": "operating_agreement_agreementcost",
+            "field": "additional_notes",
+            "type": "longtext",
+            "length": "",
+            "humanName": "uwagi"
+        },
+        {
+            "key": "fVjw8h7B",
+            "table": "operating_agreement_agreementcost",
+            "field": "monitoring_card_id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID karty monitorowania"
+        },
+        {
+            "key": "e5X6kUbs",
+            "table": "operating_agreement_agreementcost",
+            "field": "amount_brutto",
+            "type": "decimal",
+            "length": "",
+            "humanName": "kwota brutto"
+        },
+        {
+            "key": "NPk5d3GB",
+            "table": "operating_agreement_businessplan",
+            "field": "id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID biznesplanu"
+        },
+        {
+            "key": "kF5WDh7C",
+            "table": "operating_agreement_businessplan",
+            "field": "current_state",
+            "type": "decimal",
+            "length": "",
+            "humanName": "stan rzeczywisty portfela"
+        },
+        {
+            "key": "FDiIO3Dd",
+            "table": "operating_agreement_businessplan",
+            "field": "planned_state",
+            "type": "decimal",
+            "length": "",
+            "humanName": "stan planowany portfela"
+        },
+        {
+            "key": "3s2PaSJV",
+            "table": "operating_agreement_businessplan",
+            "field": "current_cost_limit",
+            "type": "decimal",
+            "length": "",
+            "humanName": "rzeczywisty limit kosztów"
+        },
+        {
+            "key": "pdLtW0CJ",
+            "table": "operating_agreement_businessplan",
+            "field": "planned_cost_limit",
+            "type": "decimal",
+            "length": "",
+            "humanName": "planowany limit kosztów"
+        },
+        {
+            "key": "LQWkw07A",
+            "table": "operating_agreement_businessplan",
+            "field": "year",
+            "type": "smallint",
+            "length": "",
+            "humanName": "rok trwania OWP"
+        },
+        {
+            "key": "56eLE1pm",
+            "table": "operating_agreement_businessplan",
+            "field": "date",
+            "type": "date",
+            "length": "",
+            "humanName": "dzień"
+        },
+        {
+            "key": "Rc9zRic8",
+            "table": "operating_agreement_businessplan",
+            "field": "operating_agreement_id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID umowy operacyjnej"
+        },
+        {
+            "key": "6TlkTJY0",
+            "table": "operating_agreement_operatingagreement",
+            "field": "id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID umowy operacyjnej"
+        },
+        {
+            "key": "6NHH3eM1",
+            "table": "operating_agreement_operatingagreement",
+            "field": "contest_number",
+            "type": "varchar",
+            "length": "40",
+            "humanName": "numer konkursu"
+        },
+        {
+            "key": "t9Bxuyez",
+            "table": "operating_agreement_operatingagreement",
+            "field": "number",
+            "type": "varchar",
+            "length": "40",
+            "humanName": "numer umowy"
+        },
+        {
+            "key": "Z3RDKQqF",
+            "table": "operating_agreement_operatingagreement",
+            "field": "product_type",
+            "type": "varchar",
+            "length": "30",
+            "humanName": "typ produktu"
+        },
+        {
+            "key": "HSqjO79s",
+            "table": "operating_agreement_operatingagreement",
+            "field": "start_date",
+            "type": "date",
+            "length": "",
+            "humanName": "data podpisania umowy"
+        },
+        {
+            "key": "5JGI1qZ7",
+            "table": "operating_agreement_operatingagreement",
+            "field": "ob_term_date",
+            "type": "date",
+            "length": "",
+            "humanName": "koniec OBP"
+        },
+        {
+            "key": "vE9AyETM",
+            "table": "operating_agreement_operatingagreement",
+            "field": "acceptance_date",
+            "type": "date",
+            "length": "",
+            "humanName": "data akceptacji wniosku o wsparcie"
+        },
+        {
+            "key": "R7S5cEtx",
+            "table": "operating_agreement_operatingagreement",
+            "field": "end_date",
+            "type": "date",
+            "length": "",
+            "humanName": "koniec OWP"
+        },
+        {
+            "key": "rP9t9bQb",
+            "table": "operating_agreement_operatingagreement",
+            "field": "wallet_period",
+            "type": "smallint",
+            "length": "",
+            "humanName": "długość OBP w miesiącach"
+        },
+        {
+            "key": "lBS3WlnO",
+            "table": "operating_agreement_operatingagreement",
+            "field": "unit_agreement_max_length",
+            "type": "smallint",
+            "length": "",
+            "humanName": "maks. dł. um. jedn. w miesiącach"
+        },
+        {
+            "key": "3Zjtmh3D",
+            "table": "operating_agreement_operatingagreement",
+            "field": "global_limit",
+            "type": "decimal",
+            "length": "",
+            "humanName": "wartość umowy"
+        },
+        {
+            "key": "1qG24GZR",
+            "table": "operating_agreement_operatingagreement",
+            "field": "beneficiary_amount_limit",
+            "type": "decimal",
+            "length": "",
+            "humanName": "maks. wart. um. jedn."
+        },
+        {
+            "key": "zn6GV2Ww",
+            "table": "operating_agreement_operatingagreement",
+            "field": "obp_percent_cost_limit",
+            "type": "decimal",
+            "length": "",
+            "humanName": "limit kosztów w OBP"
+        },
+        {
+            "key": "t5swLJj1",
+            "table": "operating_agreement_operatingagreement",
+            "field": "owp_percent_cost_limit",
+            "type": "decimal",
+            "length": "",
+            "humanName": "limit kosztów w OWP"
+        },
+        {
+            "key": "Jdh6H1Go",
+            "table": "operating_agreement_operatingagreement",
+            "field": "entity_id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID podmiotu (pośrednika lub benka)"
+        },
+        {
+            "key": "98IvwmKl",
+            "table": "unit_agreement_bank",
+            "field": "id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID banku"
+        },
+        {
+            "key": "8lGCBsMq",
+            "table": "unit_agreement_bank",
+            "field": "name",
+            "type": "varchar",
+            "length": "255",
+            "humanName": "nazwa banku"
+        },
+        {
+            "key": "mz9PXTsf",
+            "table": "unit_agreement_pkd",
+            "field": "id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID PKD"
+        },
+        {
+            "key": "Xy4RG4oL",
+            "table": "unit_agreement_pkd",
+            "field": "name",
+            "type": "varchar",
+            "length": "255",
+            "humanName": "treść PKD"
+        },
+        {
+            "key": "PitTIQ9M",
+            "table": "unit_agreement_pkd",
+            "field": "code",
+            "type": "varchar",
+            "length": "10",
+            "humanName": "kod PKD"
+        },
+        {
+            "key": "YM8DsmA0",
+            "table": "unit_agreement_tranche",
+            "field": "id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID wypłaty kapitału"
+        },
+        {
+            "key": "9NG7QtxO",
+            "table": "unit_agreement_tranche",
+            "field": "date",
+            "type": "date",
+            "length": "",
+            "humanName": "data wypłaty"
+        },
+        {
+            "key": "j2yXUmP5",
+            "table": "unit_agreement_tranche",
+            "field": "amount",
+            "type": "decimal",
+            "length": "",
+            "humanName": "kwota wypłaty"
+        },
+        {
+            "key": "g43VyzFo",
+            "table": "unit_agreement_tranche",
+            "field": "unit_agreement_id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID umowy jednostkowej"
+        },
+        {
+            "key": "miSdEG43",
+            "table": "unit_agreement_unitagreement",
+            "field": "id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID umowy jednostkowej"
+        },
+        {
+            "key": "13R3oYfu",
+            "table": "unit_agreement_unitagreement",
+            "field": "beneficiary_name",
+            "type": "varchar",
+            "length": "255",
+            "humanName": "nazwa beneficjenta"
+        },
+        {
+            "key": "K5kMK3HT",
+            "table": "unit_agreement_unitagreement",
+            "field": "beneficiary_post_code",
+            "type": "varchar",
+            "length": "10",
+            "humanName": "kod pocztowy"
+        },
+        {
+            "key": "p5D1wcVj",
+            "table": "unit_agreement_unitagreement",
+            "field": "beneficiary_province",
+            "type": "varchar",
+            "length": "100",
+            "humanName": "województwo"
+        },
+        {
+            "key": "1QIaRxOT",
+            "table": "unit_agreement_unitagreement",
+            "field": "beneficiary_city",
+            "type": "varchar",
+            "length": "50",
+            "humanName": "miasto"
+        },
+        {
+            "key": "Ase0PmXw",
+            "table": "unit_agreement_unitagreement",
+            "field": "beneficiary_street",
+            "type": "varchar",
+            "length": "50",
+            "humanName": "ulica"
+        },
+        {
+            "key": "5DV8uo7G",
+            "table": "unit_agreement_unitagreement",
+            "field": "beneficiary_building_number",
+            "type": "varchar",
+            "length": "10",
+            "humanName": "numer budynku"
+        },
+        {
+            "key": "a7EUGrB6",
+            "table": "unit_agreement_unitagreement",
+            "field": "beneficiary_place_number",
+            "type": "varchar",
+            "length": "10",
+            "humanName": "numer lokalu"
+        },
+        {
+            "key": "SLeB8ALZ",
+            "table": "unit_agreement_unitagreement",
+            "field": "beneficiary_regon",
+            "type": "varchar",
+            "length": "14",
+            "humanName": "REGON (9 cyfr)"
+        },
+        {
+            "key": "fva8Vavd",
+            "table": "unit_agreement_unitagreement",
+            "field": "beneficiary_nip",
+            "type": "varchar",
+            "length": "10",
+            "humanName": "NIP"
+        },
+        {
+            "key": "fPhoM1F4",
+            "table": "unit_agreement_unitagreement",
+            "field": "beneficiary_pkd",
+            "type": "varchar",
+            "length": "10",
+            "humanName": "PKD projektu"
+        },
+        {
+            "key": "VxrpK29s",
+            "table": "unit_agreement_unitagreement",
+            "field": "beneficiary_type",
+            "type": "varchar",
+                "length": "4",
+            "humanName": "status beneficjenta"
+        },
+        {
+            "key": "qSn0Rgee",
+            "table": "unit_agreement_unitagreement",
+            "field": "beneficiary_startup",
+            "type": "tinyint",
+            "length": "",
+            "humanName": "czy startup"
+        },
+        {
+            "key": "nJi1OGG3",
+            "table": "unit_agreement_unitagreement",
+            "field": "start_date",
+            "type": "date",
+            "length": "",
+            "humanName": "data zawarcia umowy"
+        },
+        {
+            "key": "8oY5Gn43",
+            "table": "unit_agreement_unitagreement",
+            "field": "entry_date",
+            "type": "date",
+            "length": "",
+            "humanName": "data wpisania umowy"
+        },
+        {
+            "key": "j5wmaB0W",
+            "table": "unit_agreement_unitagreement",
+            "field": "validity_term_date",
+            "type": "date",
+            "length": "",
+            "humanName": "termin obowiązywania umowy"
+        },
+        {
+            "key": "5k5wJMnS",
+            "table": "unit_agreement_unitagreement",
+            "field": "loan_number",
+            "type": "varchar",
+            "length": "40",
+            "humanName": "numer umowy"
+        },
+        {
+            "key": "puR8EIMd",
+            "table": "unit_agreement_unitagreement",
+            "field": "loan_destiny",
+            "type": "varchar",
+            "length": "255",
+            "humanName": "cel pożyczki"
+        },
+        {
+            "key": "nj1FpeSI",
+            "table": "unit_agreement_unitagreement",
+            "field": "leasing_agreement",
+            "type": "tinyint",
+            "length": "",
+            "humanName": "czy leasing"
+        },
+        {
+            "key": "MNflo10K",
+            "table": "unit_agreement_unitagreement",
+            "field": "amount",
+            "type": "decimal",
+            "length": "",
+            "humanName": "kwota umowy"
+        },
+        {
+            "key": "S0M3qOeC",
+            "table": "unit_agreement_unitagreement",
+            "field": "public_granted_amount",
+            "type": "decimal",
+            "length": "",
+            "humanName": "kwota pomocy publicznej"
+        },
+        {
+            "key": "Eb6a6TFR",
+            "table": "unit_agreement_unitagreement",
+            "field": "pf_amount_participation",
+            "type": "decimal",
+            "length": "",
+            "humanName": "wkład PF kwotowo"
+        },
+        {
+            "key": "YnUuQ24d",
+            "table": "unit_agreement_unitagreement",
+            "field": "pf_percent",
+            "type": "decimal",
+            "length": "",
+            "humanName": "wkład PF procentowo"
+        },
+        {
+            "key": "b2smR7SZ",
+            "table": "unit_agreement_unitagreement",
+            "field": "mf_amount_participation",
+            "type": "decimal",
+            "length": "",
+            "humanName": "wkład MF kwotowo"
+        },
+        {
+            "key": "lxk5NS4C",
+            "table": "unit_agreement_unitagreement",
+            "field": "mf_percent",
+            "type": "decimal",
+            "length": "",
+            "humanName": "wkład MF procentowo"
+        },
+        {
+            "key": "7sGo7bjC",
+            "table": "unit_agreement_unitagreement",
+            "field": "condition",
+            "type": "varchar",
+            "length": "20",
+            "humanName": "warunki"
+        },
+        {
+            "key": "Fmn8Bx9N",
+            "table": "unit_agreement_unitagreement",
+            "field": "security_type",
+            "type": "varchar",
+            "length": "50",
+            "humanName": "przyjęte zabezpieczenia"
+        },
+        {
+            "key": "aY7m9m4v",
+            "table": "unit_agreement_unitagreement",
+            "field": "security_comment",
+            "type": "longtext",
+            "length": "",
+            "humanName": "uwagi do zabezpieczeń"
+        },
+        {
+            "key": "9Cd60mWC",
+            "table": "unit_agreement_unitagreement",
+            "field": "credit_number",
+            "type": "varchar",
+            "length": "255",
+            "humanName": "numer umowy kredytu"
+        },
+        {
+            "key": "Tcm7hJ4i",
+            "table": "unit_agreement_unitagreement",
+            "field": "credit_amount",
+            "type": "decimal",
+            "length": "",
+            "humanName": "kwota kredytu"
+        },
+        {
+            "key": "scC7U1GH",
+            "table": "unit_agreement_unitagreement",
+            "field": "credit_date",
+            "type": "date",
+            "length": "",
+            "humanName": "data zawarcia umowy kredytu"
+        },
+        {
+            "key": "p1ZWfUvb",
+            "table": "unit_agreement_unitagreement",
+            "field": "credit_validity_date",
+            "type": "date",
+            "length": "",
+            "humanName": "termin obowiązywania umowy kredytu"
+        },
+        {
+            "key": "Y57gABlc",
+            "table": "unit_agreement_unitagreement",
+            "field": "comment",
+            "type": "longtext",
+            "length": "",
+            "humanName": "uwagi"
+        },
+        {
+            "key": "wSey6G5E",
+            "table": "unit_agreement_unitagreement",
+            "field": "bank_id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID banku"
+        },
+        {
+            "key": "pVRJe7bw",
+            "table": "unit_agreement_unitagreement",
+            "field": "beneficiary_id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID podmiotu (beneficjenta)"
+        },
+        {
+            "key": "UrN4UYcq",
+            "table": "unit_agreement_unitagreement",
+            "field": "operating_agreement_id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID umowy operacyjnej"
+        },
+        {
+            "key": "5AyHgsN0",
+            "table": "unit_agreement_unitagreement",
+            "field": "base_constant_interest",
+            "type": "decimal",
+            "length": "",
+            "humanName": "stopa bazowa"
+        },
+        {
+            "key": "wi4HxloU",
+            "table": "unit_agreement_unitagreement",
+            "field": "interest",
+            "type": "varchar",
+            "length": "20",
+            "humanName": "typ oprocentowania"
+        },
+        {
+            "key": "0p5WVKgN",
+            "table": "unit_agreement_unitagreement",
+            "field": "profit_interest",
+            "type": "decimal",
+            "length": "",
+            "humanName": "marża"
+        },
+        {
+            "key": "Se48pYNR",
+            "table": "unit_agreement_unitagreement",
+            "field": "total_interest",
+            "type": "decimal",
+            "length": "",
+            "humanName": "oprocentowanie"
+        },
+        {
+            "key": "wFBV7MsV",
+            "table": "vindication_action",
+            "field": "id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID działania windykacyjnego"
+        },
+        {
+            "key": "HJ0vv1aN",
+            "table": "vindication_action",
+            "field": "symbol",
+            "type": "varchar",
+            "length": "100",
+            "humanName": "symbol"
+        },
+        {
+            "key": "X79rMfQf",
+            "table": "vindication_action",
+            "field": "comment",
+            "type": "longtext",
+            "length": "",
+            "humanName": "opis"
+        },
+        {
+            "key": "dyh2D9Vy",
+            "table": "vindication_action",
+            "field": "action_date",
+            "type": "date",
+            "length": "",
+            "humanName": "data"
+        },
+        {
+            "key": "TlFTr1fu",
+            "table": "vindication_action",
+            "field": "monitoring_card_id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID karty monitorowania"
+        },
+        {
+            "key": "aTO8zhxX",
+            "table": "vindication_contactdata",
+            "field": "id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID osoby kontaktowej"
+        },
+        {
+            "key": "W2cYe9vT",
+            "table": "vindication_contactdata",
+            "field": "person_function",
+            "type": "varchar",
+            "length": "100",
+            "humanName": "funkcja"
+        },
+        {
+            "key": "01la8Nol",
+            "table": "vindication_contactdata",
+            "field": "name",
+            "type": "varchar",
+            "length": "255",
+            "humanName": "imię i nazwisko"
+        },
+        {
+            "key": "P182i952",
+            "table": "vindication_contactdata",
+            "field": "phone",
+            "type": "varchar",
+            "length": "20",
+            "humanName": "telefon"
+        },
+        {
+            "key": "DRE7vn6I",
+            "table": "vindication_contactdata",
+            "field": "email",
+            "type": "varchar",
+            "length": "254",
+            "humanName": "e-mail"
+        },
+        {
+            "key": "FxGJ11sm",
+            "table": "vindication_contactdata",
+            "field": "monitoring_card_id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID karty monitorowania"
+        },
+        {
+            "key": "661rLODq",
+            "table": "vindication_monitoringcard",
+            "field": "id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID karty monitorowania"
+        },
+        {
+            "key": "a4mmHAcP",
+            "table": "vindication_monitoringcard",
+            "field": "debtor",
+            "type": "varchar",
+            "length": "255",
+            "humanName": "zobowiązany"
+        },
+        {
+            "key": "UlWPvD06",
+            "table": "vindication_monitoringcard",
+            "field": "liabilities",
+            "type": "decimal",
+            "length": "",
+            "humanName": "kwota zobowiązania"
+        },
+        {
+            "key": "qWOqV2W6",
+            "table": "vindication_monitoringcard",
+            "field": "security_comment",
+            "type": "longtext",
+            "length": "",
+            "humanName": "uwagi"
+        },
+        {
+            "key": "zkTTjq5E",
+            "table": "vindication_monitoringcard",
+            "field": "unit_agreement_id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID umowy jednostkowej"
+        },
+        {
+            "key": "kD8XQkok",
+            "table": "vindication_monitoringcard",
+            "field": "guarantee_paid_amount",
+            "type": "decimal",
+            "length": "",
+            "humanName": "kwota wypłaconego poręczenia"
+        },
+        {
+            "key": "YSvCe9Ss",
+            "table": "vindication_monitoringcard",
+            "field": "guarantee_paid_date",
+            "type": "date",
+            "length": "",
+            "humanName": "data wypłaty poręczenia"
+        },
+        {
+            "key": "EK7vP60b",
+            "table": "vindication_monitoringcard",
+            "field": "loan_maturity_date",
+            "type": "date",
+            "length": "",
+            "humanName": "data wymagalności pożyczki"
+        },
+        {
+            "key": "2OI3YUx5",
+            "table": "vindication_monitoringcard",
+            "field": "reguarantee_paid_amount",
+            "type": "decimal",
+            "length": "",
+            "humanName": "kwota wypłaconego reporęczenia"
+        },
+        {
+            "key": "whMWz9JC",
+            "table": "vindication_monitoringcard",
+            "field": "reguarantee_paid_date",
+            "type": "date",
+            "length": "",
+            "humanName": "data wypłaty reporęczenia"
+        },
+        {
+            "key": "mD5qj2E5",
+            "table": "vindication_monitoringcard",
+            "field": "status",
+            "type": "varchar",
+            "length": "20",
+            "humanName": "status"
+        },
+        {
+            "key": "kHv4KkOw",
+            "table": "vindication_obligedentity",
+            "field": "id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID zobowiązanego"
+        },
+        {
+            "key": "RrL7c230",
+            "table": "vindication_obligedentity",
+            "field": "entity_type",
+            "type": "varchar",
+            "length": "100",
+            "humanName": "typ"
+        },
+        {
+            "key": "1QQTdFAX",
+            "table": "vindication_obligedentity",
+            "field": "name",
+            "type": "varchar",
+            "length": "255",
+            "humanName": "nazwa"
+        },
+        {
+            "key": "F96YsilD",
+            "table": "vindication_obligedentity",
+            "field": "address",
+            "type": "varchar",
+            "length": "255",
+            "humanName": "adres"
+        },
+        {
+            "key": "8aBeeA1x",
+            "table": "vindication_obligedentity",
+            "field": "phone",
+            "type": "varchar",
+            "length": "20",
+            "humanName": "telefon"
+        },
+        {
+            "key": "8ItvlWhr",
+            "table": "vindication_obligedentity",
+            "field": "email",
+            "type": "varchar",
+            "length": "254",
+            "humanName": "e-mail"
+        },
+        {
+            "key": "iBeJ3eGA",
+            "table": "vindication_obligedentity",
+            "field": "comment",
+            "type": "longtext",
+            "length": "",
+            "humanName": "uwagi"
+        },
+        {
+            "key": "vu6RCWeA",
+            "table": "vindication_obligedentity",
+            "field": "monitoring_card_id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID karty monitorowania"
+        },
+        {
+            "key": "Ow0VXiVw",
+            "table": "vindication_salvage",
+            "field": "id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID odzysku"
+        },
+        {
+            "key": "gwj6PowD",
+            "table": "vindication_salvage",
+            "field": "salvage_date",
+            "type": "date",
+            "length": "",
+            "humanName": "data odzysku"
+        },
+        {
+            "key": "vd2KaMNG",
+            "table": "vindication_salvage",
+            "field": "pf_fund",
+            "type": "decimal",
+            "length": "",
+            "humanName": "kapitał PF"
+        },
+        {
+            "key": "D4THt1GO",
+            "table": "vindication_salvage",
+            "field": "mfp_fund",
+            "type": "decimal",
+            "length": "",
+            "humanName": "kapitał FR"
+        },
+        {
+            "key": "wyDIJW2C",
+            "table": "vindication_salvage",
+            "field": "pf_contractual_interest",
+            "type": "decimal",
+            "length": "",
+            "humanName": "odsetki umowne PF"
+        },
+        {
+            "key": "hrRok23Y",
+            "table": "vindication_salvage",
+            "field": "mfp_contractual_interest",
+            "type": "decimal",
+            "length": "",
+            "humanName": "odsetki umowne FR"
+        },
+        {
+            "key": "E6ZYjnMG",
+            "table": "vindication_salvage",
+            "field": "pf_overdue_debt",
+            "type": "decimal",
+            "length": "",
+            "humanName": "odsetki karne PF"
+        },
+        {
+            "key": "18Y90lh2",
+            "table": "vindication_salvage",
+            "field": "mfp_overdue_debt",
+            "type": "decimal",
+            "length": "",
+            "humanName": "odsetki karne FR"
+        },
+        {
+            "key": "uKN8SR0N",
+            "table": "vindication_salvage",
+            "field": "salvage_overall_amount",
+            "type": "decimal",
+            "length": "",
+            "humanName": "całkowita kwota odzysku"
+        },
+        {
+            "key": "9Ng6lr6O",
+            "table": "vindication_salvage",
+            "field": "monitoring_card_id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID karty monitorowania"
+        },
+        {
+            "key": "c0yuGWYL",
+            "table": "vindication_salvagecost",
+            "field": "id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID kosztu odzysku"
+        },
+        {
+            "key": "EaaL7Yi2",
+            "table": "vindication_salvagecost",
+            "field": "cost_salvage",
+            "type": "decimal",
+            "length": "",
+            "humanName": "kwota kosztu"
+        },
+        {
+            "key": "5pROJ2Nc",
+            "table": "vindication_salvagecost",
+            "field": "salvage_id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID odzysku"
+        },
+        {
+            "key": "QPcN0m8N",
+            "table": "vindication_security",
+            "field": "id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID zabezpieczenia"
+        },
+        {
+            "key": "W2fxnbYn",
+            "table": "vindication_security",
+            "field": "security_type",
+            "type": "varchar",
+            "length": "255",
+            "humanName": "kod"
+        },
+        {
+            "key": "0goqzW62",
+            "table": "vindication_security",
+            "field": "name",
+            "type": "varchar",
+            "length": "255",
+            "humanName": "nazwa"
+        },
+        {
+            "key": "l1NRe7EB",
+            "table": "vindication_security",
+            "field": "comment",
+            "type": "longtext",
+            "length": "",
+            "humanName": "uwagi"
+        },
+        {
+            "key": "7otEsO6n",
+            "table": "vindication_security",
+            "field": "monitoring_card_id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID karty monitorowania"
+        },
+        {
+            "key": "J9ne9h50",
+            "table": "vindication_vindicationprogress",
+            "field": "id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID postępu windykacji"
+        },
+        {
+            "key": "k4hA6SnW",
+            "table": "vindication_vindicationprogress",
+            "field": "year",
+            "type": "smallint",
+            "length": "",
+            "humanName": "rok"
+        },
+        {
+            "key": "4MiZksw7",
+            "table": "vindication_vindicationprogress",
+            "field": "quarter",
+            "type": "smallint",
+            "length": "",
+            "humanName": "kwartał"
+        },
+        {
+            "key": "bZ61AZQm",
+            "table": "vindication_vindicationprogress",
+            "field": "pf_fund",
+            "type": "decimal",
+            "length": "",
+            "humanName": "zadłużenie z kapitału PF"
+        },
+        {
+            "key": "EMncbL5M",
+            "table": "vindication_vindicationprogress",
+            "field": "mfp_fund",
+            "type": "decimal",
+            "length": "",
+            "humanName": "zadłużenie z kapitału FR"
+        },
+        {
+            "key": "FqBL8Aye",
+            "table": "vindication_vindicationprogress",
+            "field": "pf_contractual_interest",
+            "type": "decimal",
+            "length": "",
+            "humanName": "zadłużenie z odsetek umownych PF"
+        },
+        {
+            "key": "2YaxKZfV",
+            "table": "vindication_vindicationprogress",
+            "field": "mfp_contractual_interest",
+            "type": "decimal",
+            "length": "",
+            "humanName": "zadłużenie z odsetek umownych FR"
+        },
+        {
+            "key": "0Zl9Jg4z",
+            "table": "vindication_vindicationprogress",
+            "field": "pf_overdue_debt",
+            "type": "decimal",
+            "length": "",
+            "humanName": "zadłużenie z odsetek karnych PF"
+        },
+        {
+            "key": "k5MJkNxz",
+            "table": "vindication_vindicationprogress",
+            "field": "mfp_overdue_debt",
+            "type": "decimal",
+            "length": "",
+            "humanName": "zadłużenie z odsetek karnych FR"
+        },
+        {
+            "key": "GG0UL3gb",
+            "table": "vindication_vindicationprogress",
+            "field": "pf_fund_total",
+            "type": "decimal",
+            "length": "",
+            "humanName": "zadłużenie łączne PF"
+        },
+        {
+            "key": "A4KsrfND",
+            "table": "vindication_vindicationprogress",
+            "field": "mfp_fund_total",
+            "type": "decimal",
+            "length": "",
+            "humanName": "zadłużenie łączne FR"
+        },
+        {
+            "key": "tYMgRm70",
+            "table": "vindication_vindicationprogress",
+            "field": "costs",
+            "type": "decimal",
+            "length": "",
+            "humanName": "zadłużenie z kosztów windykacji"
+        },
+        {
+            "key": "m2Ck1PFD",
+            "table": "vindication_vindicationprogress",
+            "field": "total_sum",
+            "type": "decimal",
+            "length": "",
+            "humanName": "zadłużenie całkowite"
+        },
+        {
+            "key": "5GixcY3l",
+            "table": "vindication_vindicationprogress",
+            "field": "monitoring_card_id",
+            "type": "int",
+            "length": "",
+            "humanName": "ID karty monitorowania"
+        },
+        {
+            "key": "cIXnk7Xt",
+            "table": "vindication_vindicationprogress",
+            "field": "comment",
+            "type": "longtext",
+            "length": "",
+            "humanName": "uwagi"
+        }
+    ]
+}

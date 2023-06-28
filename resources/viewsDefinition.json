@@ -1,0 +1,131 @@
+{
+    "views": [
+        {
+            "table": "unit_agreement_unitagreement",
+            "humanName": "Sformatowane umowy jednostkowe",
+            "key": "ETo0jXYW",
+            "query": "SELECT|n|  `u2`.`id`|n|  , `u1`.`number`|n|  , `u1`.`product_type`|n|  , `pf`.`name` AS `pf_name`|n|  , `pf`.`short_name` AS `pf_short_name`|n|  , `u2`.`loan_number`|n|  , `u2`.`beneficiary_name`|n|  , `u2`.`beneficiary_nip`|n|  , `u2`.`beneficiary_regon`|n|  , `u2`.`beneficiary_pkd`|n|  , `u2`.`beneficiary_type`|n|  , `u2`.`amount`|n|  , `u2`.`public_granted_amount`|n|  , `u2`.`pf_amount_participation`|n|  , `u2`.`pf_percent`|n|  , `u2`.`mf_amount_participation`|n|  , `u2`.`mf_percent`|n|FROM |n|  `wfr_production`.`unit_agreement_unitagreement` AS `u2`|n|  LEFT JOIN `wfr_production`.`operating_agreement_operatingagreement` AS `u1` ON `u2`.`operating_agreement_id`=`u1`.`id`|n|  LEFT JOIN `wfr_production`.`entities_entity` AS `pf` ON `u1`.`entity_id`=`pf`.`id`|n|;",
+            "fields": [
+                {
+                    "key": "miSdEG43",
+                    "field": "id",
+                    "type": "int",
+                    "length": "",
+                    "humanName": "ID umowy jednostkowej"
+                },
+                {
+                    "key": "t9Bxuyez",
+                    "field": "number",
+                    "type": "varchar",
+                    "length": "40",
+                    "humanName": "numer umowy z PF"
+                },
+                {
+                    "key": "Z3RDKQqF",
+                    "field": "product_type",
+                    "type": "varchar",
+                    "length": "30",
+                    "humanName": "typ produktu"
+                },
+                {
+                    "key": "79YIZnig",
+                    "field": "pf_name",
+                    "type": "varchar",
+                    "length": "200",
+                    "humanName": "nazwa PF"
+                },
+                {
+                    "key": "yQ9hCkaW",
+                    "field": "pf_short_name",
+                    "type": "varchar",
+                    "length": "200",
+                    "humanName": "nazwa skrócona PF"
+                },
+                {
+                    "key": "5k5wJMnS",
+                    "field": "loan_number",
+                    "type": "varchar",
+                    "length": "40",
+                    "humanName": "numer umowy z OW"
+                },
+                {
+                    "key": "13R3oYfu",
+                    "field": "beneficiary_name",
+                    "type": "varchar",
+                    "length": "255",
+                    "humanName": "nazwa beneficjenta"
+                },
+                {
+                    "key": "SLeB8ALZ",
+                    "field": "beneficiary_regon",
+                    "type": "varchar",
+                    "length": "14",
+                    "humanName": "REGON (9 cyfr)"
+                },
+                {
+                    "key": "fva8Vavd",
+                    "field": "beneficiary_nip",
+                    "type": "varchar",
+                    "length": "10",
+                    "humanName": "NIP"
+                },
+                {
+                    "key": "fPhoM1F4",
+                    "field": "beneficiary_pkd",
+                    "type": "varchar",
+                    "length": "10",
+                    "humanName": "PKD projektu"
+                },
+                {
+                    "key": "VxrpK29s",
+                    "field": "beneficiary_type",
+                    "type": "varchar",
+                        "length": "4",
+                    "humanName": "status beneficjenta"
+                },
+                {
+                    "key": "MNflo10K",
+                    "field": "amount",
+                    "type": "decimal",
+                    "length": "",
+                    "humanName": "kwota umowy"
+                },
+                {
+                    "key": "S0M3qOeC",
+                    "field": "public_granted_amount",
+                    "type": "decimal",
+                    "length": "",
+                    "humanName": "kwota pomocy publicznej"
+                },
+                {
+                    "key": "Eb6a6TFR",
+                    "field": "pf_amount_participation",
+                    "type": "decimal",
+                    "length": "",
+                    "humanName": "wkład PF kwotowo"
+                },
+                {
+                    "key": "YnUuQ24d",
+                    "field": "pf_percent",
+                    "type": "decimal",
+                    "length": "",
+                    "humanName": "wkład PF procentowo"
+                },
+                {
+                    "key": "b2smR7SZ",
+                    "field": "mf_amount_participation",
+                    "type": "decimal",
+                    "length": "",
+                    "humanName": "wkład MF kwotowo"
+                },
+                {
+                    "key": "lxk5NS4C",
+                    "field": "mf_percent",
+                    "type": "decimal",
+                    "length": "",
+                    "humanName": "wkład MF procentowo"
+                }
+            ]
+        }
+    ]
+}
